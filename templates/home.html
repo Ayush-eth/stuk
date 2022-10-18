@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    
+    <title>STUK</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,600;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+
+    <link rel="stylesheet" href="{% static 'index.css' %}"> 
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <label class="logo">Stuk</label>
+            <ul>
+               
+                <li><a href="#" id="active">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Gift Cards</a></li>
+                <li><a href="about.html">About</a></li>
+                
+            </ul>
+            
+        
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+         
+            <form method="POST" action="search">
+                <h1>STUK</h1>
+                {% csrf_token %}
+                <p><input class = "sahil" type="text" name="text" placeholder="Search Your Product"></p>
+                <button class="hero-btn">SEARCH</button>
+                
+            </form>
+        </div>
+    </section>
+    <section class="course">
+        <h1>WEB SCRAPPER</h1>
+        <h2>SCRAP IT WRAP IT</h2>
+        <div class="row">
+            <div class="course-col">
+                <h3>CLOTHES</h3>
+                
+            </div>
+            <div class="course-col">
+                <h3>FOOTWEAR</h3>
+              
+            </div>
+            <div class="course-col">
+                <h3>ELECTRONICS</h3>
+                
+            </div>
+        </div>
+    </section>
+    <section class="campus">
+        <div class="row">
+            <div class="campus-col">
+                <h3>100% SECURE REDIRECTIONS</h3>
+                
+            </div>
+            <div class="campus-col">
+                <h3>GENUINE PRODUStuk
+                    CTS</h3>
+                
+            </div>
+            <div class="campus-col">
+                <h3>24x7 HELP SUPPORT</h3>
+                
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <h4>ABOUT US</h4>
+        <p>A Product By- Ayush  </p>
+    </section>
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</body>
+
+</html>

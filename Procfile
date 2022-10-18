@@ -1,0 +1,1 @@
+web: gunicorn stuk.wsgi --log-file -
